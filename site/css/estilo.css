@@ -1,0 +1,18 @@
+body{
+	background-color: white;
+
+}
+.container1{
+	background-color: white;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+p{
+	background-color: white;
+	color: white;
+	text-decoration: none;
+}
