@@ -13,23 +13,26 @@
 </script>
 
 <body>
+    <h1 id="numero"></h1>
     <input type="text" placeholder="numero" id="num">
-    <input type="button" onclick="compare(document.getElementById('num').value)" value="verificar se é maior que 5">
-    <p id="numero"></p>
-    <input type="text"  id="x1" placeholder="insira o primeiro valor">
-    <input type="text"  id="x2" placeholder="insira o segundo valor">
-    <input type="button" onclick="matematica(x =+ document.getElementById('x1').value)">
-    <p id="matematicar"></p>
+    <input type="button" onclick="compare(document.getElementById('num').value)" value="maior que 5?">
+    <br>
+    <div class="matematica">
+        <input type="text" id="x1" placeholder="insira o primeiro valor">
+        <input type="text" id="x2" placeholder="insira o segundo valor">
+        <input type="button" value="Matematica" onclick="matematica(x =+ document.getElementById('x1').value)">
+        <p id="matematicar"></p>
+    </div>
     <br>
     <h3 id="bobor"></h3>
     <input type="text" id="textob">
-    <input type="button" onclick="texto(document.getElementById('textob').value)">
+    <input type="button" value=" " onclick="texto(document.getElementById('textob').value)">
 </body>
 
 </html>
 <script type="text/javascript">
-    
+
 </script>
 <script type="text/javascript">
-    document.getElementById('numero').innerHTML = "Olá asdasd"
+    document.getElementById('numero').innerHTML = "Modularização de Código"
 </script>
