@@ -18,15 +18,19 @@
     <input type="button" onclick="compare(document.getElementById('num').value)" value="maior que 5?">
     <br>
     <div class="matematica">
-        <input type="text" id="x1" placeholder="insira o primeiro valor">
-        <input type="text" id="x2" placeholder="insira o segundo valor">
+        <input type="number" id="x1" placeholder="insira o primeiro valor">
+        <input type="number" id="x2" placeholder="insira o segundo valor">
         <input type="button" value="Matematica" onclick="matematica(x =+ document.getElementById('x1').value)">
-        <p id="matematicar"></p>
     </div>
+    <p id="matematicar"></p>
     <br>
-    <h3 id="bobor"></h3>
+    <h3 id="bobor">Insira seu nome</h3>
+    <input type="button" class="nada" id="sim" onclick="salvar(x = document.getElementById('textob').value)" value="" style="background-color: transparent; border: 0px; width: 0px; height: 0px;">
+    <input type="button" class="nada" id="nao" value="" style="background-color: transparent; border: 0px;">
+    <br>
     <input type="text" id="textob">
-    <input type="button" value=" " onclick="texto(document.getElementById('textob').value)">
+    <input type="button" value="Confirmar" onclick="texto(document.getElementById('textob').value)">
+    <h4 id="mostrar"></h4>
 </body>
 
 </html>
