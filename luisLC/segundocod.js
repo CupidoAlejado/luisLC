@@ -17,27 +17,32 @@ function texto(x){
         document.getElementById('nao').style = "background-color: transparent; border: 0px;"
         document.getElementById('sim').class = "nada"
         document.getElementById('nao').class = "nada"
+        document.getElementById('textob').value = ''
     }
     document.getElementById('bobor').innerHTML = x
 }
 function salvar(x){
-    a = []
-    a[0] = x
+    a[cont-1] = x
     x = null
+    cont++
+    document.getElementById('nmrcao').innerHTML = cont
     document.getElementById('textob').value = null
-    document.getElementById('mostrar').innerHTML = a
+    document.getElementById('mostrar').innerHTML = a + a
 }
 
 function matematica(x){
-    y =+ document.getElementById('x2').value
+    y=document.getElementById('x2').value
     if (x === '' || y === '') {
         alert('Preencha os dois campos')
         return false;
     }
+    x=+x
+    y=+y
     var divisao= x / y
     var soma = x + y
     var multi = x * y
     var sub = x - y
     final = ["a divisão é: "+divisao+"","<br> a multiplicação é: "+multi+" ","<br> a soma é: "+soma+" ","<br> a subtração é: "+sub+"<br> "]
     document.getElementById('matematicar').innerHTML = final
+    x = ''
 }
