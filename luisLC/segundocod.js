@@ -1,6 +1,26 @@
 function texto(x) {
     if (x !== "") {
-        x = [x + " é o seu nome?"]
+        l = + document.getElementById('nmrcao').innerHTML
+        if (l == "1") {
+            x = [x + " é o seu nome?"]
+        }
+        else if (l == "2") {
+            x = [x + " é a sua idade?"]
+        }
+        else if (l == "3") {
+            x = [x + " é o seu estado civil?"]
+        }
+        else if (l == "4") {
+            x = [x + " é o seu Email?"]
+        }
+        else if (l == "5") {
+            x = [x + " é o seu nível de escolaridade?"]
+        }
+        else if (l == "6") {
+
+            x = [" Tem certeza disso?"]
+        }
+
         document.getElementById('sim').value = "Sim"
         //document.getElementById('sim').onclick = "salvar(x = document.getElementById('textob').value)"
         document.getElementById('nao').value = "Não"
@@ -10,44 +30,59 @@ function texto(x) {
         document.getElementById('nao').class = "botao"
     }
     else {
-        if (document.getElementById('nmrcao').innerHTML = "1") {
+        l = + document.getElementById('nmrcao').innerHTML
+        if (l == "1") {
             x = "Insira seu nome"
         }
-        else if (document.getElementById('nmrcao').innerHTML = "2") {
+        else if (l == "2") {
             x = "Insira sua idade"
         }
-        else if (document.getElementById('nmrcao').innerHTML = "3") {
+        else if (l == "3") {
             x = "Informe seu Estado Civil"
         }
-        else if (document.getElementById('nmrcao').innerHTML = "4") {
+        else if (l == "4") {
             x = "Informe o Email para cadastro"
         }
-        else if (document.getElementById('nmrcao').innerHTML = "5") { 
+        else if (l == "5") {
             x = "Qual é o seu nível de escolaridade?"
         }
-        else if (document.getElementById('nmrcao').innerHTML = "6") {
+        else if (l == "6") {
             x = "O Gojo volta?"
         }
-            document.getElementById('sim').value = " "
-            document.getElementById('nao').value = " "
-            document.getElementById('sim').style = "background-color: transparent; border: 0px; width: 0px; height: 0px;"
-            document.getElementById('nao').style = "background-color: transparent; border: 0px; width: 0px; height: 0px;"
-            document.getElementById('sim').class = "nada"
-            document.getElementById('nao').class = "nada"
-            document.getElementById('textob').value = ''
+        document.getElementById('sim').value = " "
+        document.getElementById('nao').value = " "
+        document.getElementById('sim').style = "background-color: transparent; border: 0px; width: 0px; height: 0px;"
+        document.getElementById('nao').style = "background-color: transparent; border: 0px; width: 0px; height: 0px;"
+        document.getElementById('sim').class = "nada"
+        document.getElementById('nao').class = "nada"
+        document.getElementById('textob').value = ''
     }
     document.getElementById('bobor').innerHTML = x
 }
 function salvar(x) {
     cont = document.getElementById('nmrcao').innerHTML
-    a = []
+    if (cont == "1") {
+        a = []
+    }
+    CheckNum =+ x/2
+    if (cont == "2" && CheckNum == NaN) {
+        alert('ayyyyy')
+    }
     a[cont - 1] = x
-    x = null
     cont++
-    document.getElementById('nmrcao').innerHTML =+ cont
-    document.getElementById('textob').value = null
-    document.getElementById('mostrar').innerHTML = a
-    texto('')
+    x = null
+    if (cont < 7) {
+        document.getElementById('nmrcao').innerHTML = + cont
+        document.getElementById('textob').value = null
+        document.getElementById('mostrar').innerHTML = a
+        texto('')
+    }
+    else {
+        document.getElementById('textob').value = null
+        document.getElementById('mostrar').innerHTML = null
+        texto('')
+
+    }
 }
 
 function matematica(x) {
