@@ -64,7 +64,7 @@ function salvar(x) {
     if (cont == "1") {
         a = []
     }
-    CheckNum =+ x/2
+    CheckNum = + x / 2
     if (cont == "2" && CheckNum == NaN) {
         alert('ayyyyy')
     }
@@ -100,4 +100,32 @@ function matematica(x) {
     final = ["a divisão é: " + divisao + "", "<br> a multiplicação é: " + multi + " ", "<br> a soma é: " + soma + " ", "<br> a subtração é: " + sub + "<br> "]
     document.getElementById('matematicar').innerHTML = final
     x = ''
+}
+
+
+
+
+
+//cadastro gay
+
+
+
+
+
+
+function salvar(textoc,textod) {
+    cont = document.getElementById('nmrcao').innerHTML
+    if (cont == "1") {
+        a = []
+    }
+    a[cont - 1] = textoc +" - "+ textod
+    cont++
+    textoc = null
+    textod = null
+    if (cont < 7) {
+        document.getElementById('nmrcao').innerHTML = + cont
+        document.getElementById('textoc').value = null
+        document.getElementById('textod').value = null
+        document.getElementById('mostrar').innerHTML = a
+    }
 }
