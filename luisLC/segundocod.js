@@ -75,10 +75,12 @@ function salvar(x) {
         document.getElementById('nmrcao').innerHTML = + cont
         document.getElementById('textob').value = null
         document.getElementById('mostrar').innerHTML = a
+        document.getElementById('mostrar1').innerHTML = a
         texto('')
     }
     else {
         document.getElementById('textob').value = null
+        document.getElementById('mostrar1').innerHTML = null
         document.getElementById('mostrar').innerHTML = null
         texto('')
 
