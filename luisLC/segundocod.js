@@ -1,3 +1,6 @@
+//esse .js contém o código do texto pro quiz, mas lá em baixo tem a function da matemática.
+
+//function do quiz (feito extracurricularmente por diversão / não finalizado)
 function texto(x) {
     if (x !== "") {
         l = + document.getElementById('nmrcao').innerHTML
@@ -59,6 +62,7 @@ function texto(x) {
     }
     document.getElementById('bobor').innerHTML = x
 }
+//function que salva os dados do quiz
 function salvar(x) {
     cont = document.getElementById('nmrcao').innerHTML
     if (cont == "1") {
@@ -86,7 +90,7 @@ function salvar(x) {
 
     }
 }
-
+//function da matemática (:,+,x,-) do valor escolhido
 function matematica(x) {
     y = document.getElementById('x2').value
     if (x === '' || y === '') {
@@ -105,16 +109,7 @@ function matematica(x) {
 }
 
 
-
-
-
-//cadastro gay
-
-
-
-
-
-
+//function que salva o cadastro no vetor (nome - telefone)
 function salvar(textoc,textod) {
     cont = document.getElementById('nmrcao').innerHTML
     if (cont == "1") {
